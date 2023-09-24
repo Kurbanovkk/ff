@@ -52,32 +52,20 @@ namespace ConsoleApp7
             Console.WriteLine("Поиск 496753-го элемента:");
 
             stopwatch.Start();
-            var value2 = 0;
-            for (int i = 0; i < list.Count; i++)
-            {
-                if (i == 496752)
-                {
-                    value2 = list[i];
-                    break;
-                }
-            }
+
+            var value2 = list.IndexOf(496753);
+
             stopwatch.Stop();
-            Console.WriteLine($"List:  значение под индексом 496752: {value2}, время {stopwatch.ElapsedMilliseconds} ms, {stopwatch.ElapsedTicks} ticks");
+            Console.WriteLine($"List:  значение под индексом 496753: {value2}, время {stopwatch.ElapsedMilliseconds} ms, {stopwatch.ElapsedTicks} ticks");
 
             stopwatch.Reset();
 
             stopwatch.Start();
-            var value1 = 0;
-            for (int i = 0; i < arrayList.Count; i++)
-            {
-                if (i == 496752)
-                {
-                    value1 = (int)arrayList[i];
-                    break;
-                }
-            }
+
+            var value1 = arrayList.IndexOf(496753);
+
             stopwatch.Stop();
-            Console.WriteLine($"ArrayList: значение под индексом 496752: {value1}, время {stopwatch.ElapsedMilliseconds} ms,  {stopwatch.ElapsedTicks}  ticks");
+            Console.WriteLine($"ArrayList: значение под индексом 496753: {value1}, время {stopwatch.ElapsedMilliseconds} ms,  {stopwatch.ElapsedTicks}  ticks");
 
             stopwatch.Reset();
 
